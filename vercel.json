@@ -1,16 +1,21 @@
 {
-    "builds": [{
-        "src": "codingo_django/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" },
-        "env": {
-            "MYSQL_CONFIG": "mysql_config"
-          }
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "codingo_django/wsgi.py"
-        }
-    ]
+  "builds": [
+    {
+      "src": "codingo_django/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.9"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "codingo_django/wsgi.py"
+    }
+  ],
+  "env": {
+    "MYSQL_CONFIG": "mysql_config"
+  }
 }
