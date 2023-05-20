@@ -2,7 +2,10 @@
     "builds": [{
         "src": "codingo_django/wsgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" },
+        "env": {
+            "MYSQL_CONFIG": "mysql_config"
+          }
     }],
     "routes": [
         {
