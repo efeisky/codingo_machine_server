@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "codingo_django/wsgi.py",
@@ -14,8 +15,5 @@
       "src": "/(.*)",
       "dest": "codingo_django/wsgi.py"
     }
-  ],
-  "env": {
-    "MYSQL_CONFIG": "mysql_config"
-  }
+  ]
 }
